@@ -285,3 +285,34 @@ cnoremap jj <c-c>
 map <leader>v :sp ~/.vim/vimrc<CR><C-W>_
 " ,V reloads vimrc file
 map <silent> <leader>V :source ~/.vim/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" quick add newline with <CR>
+nmap <CR> o<esc>
+
+" show registers with ,r
+nmap <leader>r :register<CR>
+
+" paste from numbered register with ,<number>
+nmap <leader>0 "0p
+nmap <leader>1 "1p
+nmap <leader>2 "2p
+nmap <leader>3 "3p
+nmap <leader>4 "4p
+nmap <leader>5 "5p
+nmap <leader>6 "6p
+nmap <leader>7 "7p
+nmap <leader>8 "8p
+nmap <leader>9 "9p
+
+" moving between splits
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" PyDoc
+" http://www.vim.org/scripts/script.php?script_id=910
+" Search python docs for the keyword
+" <leader>pw - search for docs for what's under cursor
+" <leader>pW - search for any docs with this keyword mentioned
+
