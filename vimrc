@@ -77,6 +77,9 @@ set novisualbell
 set t_vb=
 set tm=500
 
+" turn on line numbering
+set number
+
 
 """"""""""""""""""""""""""""""""""""
 " Colors and Fonts
