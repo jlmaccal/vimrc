@@ -20,9 +20,6 @@ set autoread
 let mapleader = ","
 let g:mapleader = ","
 
-" fast saving
-nmap <leader>w :w!<cr>
-
 " set the shell
 set shell=/bin/bash
 
@@ -263,4 +260,12 @@ map <leader>s? z=
 " => Python section
 """"""""""""""""""""""""""""""
 let python_highlight_all = 1
+
+
+
+""""""""""""""""""""""""""""""
+" => Relative number
+""""""""""""""""""""""""""""""
+map <leader>rn :RltvNmbr<CR>
+map <leader>rN :RltvNmbr!<CR>
 
