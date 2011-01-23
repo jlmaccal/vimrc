@@ -256,4 +256,8 @@ map <leader>sa zg
 map <leader>s? z=
 
 
+""""""""""""""""""""""""""""""
+" => Python section
+""""""""""""""""""""""""""""""
+let python_highlight_all = 1
 
