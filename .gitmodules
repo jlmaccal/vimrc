@@ -52,3 +52,6 @@
 [submodule "bundle/vim-yankring"]
 	path = bundle/vim-yankring
 	url = https://github.com/chrismetcalf/vim-yankring.git
+[submodule "bundle/vim-latex"]
+	path = bundle/vim-latex
+	url = https://github.com/jcf/vim-latex.git
