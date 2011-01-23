@@ -19,3 +19,6 @@
 [submodule "bundle/vim-scmdiff"]
 	path = bundle/vim-scmdiff
 	url = https://github.com/ghewgill/vim-scmdiff.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
