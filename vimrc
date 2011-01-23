@@ -26,8 +26,9 @@ set shell=/bin/bash
 """"""""""""""""""""""""""""""""""""
 " vim user interface settings
 """"""""""""""""""""""""""""""""""""
-" set 7 lines to the cursors when moving vertically
-set so=7
+" set 5 lines/chars when scrolling
+set scrolloff=5
+set sidescrolloff=5
 
 " turn on wild menu
 set wildmode=longest:full
@@ -69,10 +70,10 @@ set showmatch
 set mat=2
 
 " no sound on errors
-set noerrorbells
-set novisualbell
-set t_vb=
-set tm=500
+"set noerrorbells
+set visualbell
+"set t_vb=
+"set tm=500
 
 " turn on line numbering
 set number
@@ -132,9 +133,6 @@ set ai
 " smart indent
 set si
 
-" wrap lines
-set wrap
-
 
 """"""""""""""""""""""""""""""""""""
 " Visual mode related
@@ -146,6 +144,10 @@ vnoremap <silent> # :call VisualSearch('b')<CR>
 " When you press gv you vimgrep after the selected text
 vnoremap <silent> gv :call VisualSearch('gv')<CR>
 map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
+
+" make shifts keep visual selection
+vnoremap < <gv
+vnoremap > >gv
 
 " Bash like keys for the command line
 cnoremap <C-A>      <Home>
