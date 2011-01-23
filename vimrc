@@ -53,6 +53,8 @@ set smartcase
 
 " highlight search
 set hlsearch
+" use ,/ to hide the highlighting
+nnoremap <silent> <leader>/ :nohlsearch<Bar>:echo<CR>
 
 " turn on incremental search
 set incsearch
