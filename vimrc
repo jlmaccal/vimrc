@@ -90,4 +90,4 @@ set gfn=Menlo:h14
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme ir_black
+colorscheme wombat
