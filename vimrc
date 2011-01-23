@@ -272,3 +272,16 @@ map <leader>rN :RltvNmbr!<CR>
 " => delimiMate
 """"""""""""""""""""""""""""""
 let delimitMate_expand_space=1
+
+
+""""""""""""""""""""""""""""""
+" => key mappings
+""""""""""""""""""""""""""""""
+" set jj to be <esc>
+inoremap jj <esc>
+cnoremap jj <c-c>
+
+" ,v brings up vimrc file
+map <leader>v :sp ~/.vim/vimrc<CR><C-W>_
+" ,V reloads vimrc file
+map <silent> <leader>V :source ~/.vim/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
