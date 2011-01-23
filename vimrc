@@ -244,8 +244,8 @@ map <leader>p :cp<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
+"Pressing ,s will toggle and untoggle spell checking
+map <leader>s :setlocal spell!<cr>
 
 "Shortcuts using <leader>
 map <leader>sn ]s
@@ -266,12 +266,6 @@ let python_highlight_all = 1
 """"""""""""""""""""""""""""""
 map <leader>rn :RltvNmbr<CR>
 map <leader>rN :RltvNmbr!<CR>
-
-
-""""""""""""""""""""""""""""""
-" => delimiMate
-""""""""""""""""""""""""""""""
-let delimitMate_expand_space=1
 
 
 """"""""""""""""""""""""""""""
@@ -315,4 +309,13 @@ map <c-h> <c-w>h
 " Search python docs for the keyword
 " <leader>pw - search for docs for what's under cursor
 " <leader>pW - search for any docs with this keyword mentioned
+
+" ,se to start buffer explorer
+"nunmap <leader>be
+"nunmap <leader>bs
+"nunmap <leader>bv
+nmap <script> <silent> <unique> <leader>se :BufExplorer<CR>
+
+" ,ss for lusty jugler
+nmap <silent> <leader>ss :LustyJuggler<CR>
 
