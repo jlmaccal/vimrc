@@ -49,3 +49,6 @@
 [submodule "bundle/vimtodo"]
 	path = bundle/vimtodo
 	url = https://github.com/mivok/vimtodo.git
+[submodule "bundle/vim-yankring"]
+	path = bundle/vim-yankring
+	url = https://github.com/chrismetcalf/vim-yankring.git
