@@ -273,3 +273,8 @@ let python_highlight_all = 1
 map <leader>rn :RltvNmbr<CR>
 map <leader>rN :RltvNmbr!<CR>
 
+
+""""""""""""""""""""""""""""""
+" => delimiMate
+""""""""""""""""""""""""""""""
+let delimitMate_expand_space=1
