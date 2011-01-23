@@ -311,11 +311,6 @@ map <c-h> <c-w>h
 " <leader>pW - search for any docs with this keyword mentioned
 
 " ,se to start buffer explorer
-"nunmap <leader>be
-"nunmap <leader>bs
-"nunmap <leader>bv
-nmap <script> <silent> <unique> <leader>se :BufExplorer<CR>
+nmap <script> <silent> <unique> <leader>ll :BufExplorer<CR>
 
-" ,ss for lusty jugler
-nmap <silent> <leader>ss :LustyJuggler<CR>
 
