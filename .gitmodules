@@ -58,3 +58,6 @@
 [submodule "bundle/lusty-juggler"]
 	path = bundle/lusty-juggler
 	url = https://github.com/sjbach/lusty.git
+[submodule "bundle/vimwiki"]
+	path = bundle/vimwiki
+	url = https://github.com/vim-scripts/vimwiki.git

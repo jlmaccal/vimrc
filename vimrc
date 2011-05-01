@@ -3,6 +3,7 @@ call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
 
+
 """"""""""""""""""""""""""""""""""""
 " General Setup
 """"""""""""""""""""""""""""""""""""
@@ -311,6 +312,14 @@ map <c-h> <c-w>h
 " <leader>pW - search for any docs with this keyword mentioned
 
 " ,se to start buffer explorer
-nmap <script> <silent> <unique> <leader>ll :BufExplorer<CR>
+nmap <script> <silent> <leader>ll :BufExplorer<CR>
+
+
+" Stuff for latex-suite
+set shellslash
+set grepprg=grep\ -nH\ $*
+filetype indent on
+let g:tex_flavor='latex'
+    
 
 

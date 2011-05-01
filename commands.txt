@@ -9,6 +9,12 @@ jj                  Type quickly to exit insert mode. (Like pressing <esc>, but 
 <return>            Type in normal mode to add a newline. Same as o<esc>
 
 
+## Command buffers
+q:                  Open command buffer
+q/                  Open search buffer
+<C-f>               Open command line in command buffer
+
+
 ## vimrc file
 
 ,v                  Load vimrc for editing
@@ -73,7 +79,18 @@ as..kl              Press to select buffer. Press again to confirm.
 ,w                  Camel case forward
 ,b                  Camel case backwards
 ,e                  Camel case to end of word
-
+g;                  Move cursor back to last edit. Hit again to move
+                    to previous edit.
+g,                  Move forward through changelist
+:changes            View changelist
+}{                  Jump to next/previous paragraph
+)(                  Jump to next/previous sentence
+H                   Move to top of page
+M                   Move to middle of page
+L                   Move to bottom of page
+<c-o>               Move back through jump list
+<c-i>               Move forward through jump list
+:jumps              View jump history
 
 ## Commenting
 ,c<space>           Toggle comments on the selected lines
