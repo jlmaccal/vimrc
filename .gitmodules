@@ -7,9 +7,6 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/tpope/vim-markdown.git
 [submodule "bundle/vim-repeat"]
 	path = bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
@@ -61,3 +58,6 @@
 [submodule "bundle/vim-task"]
 	path = bundle/vim-task
 	url = git://github.com/samsonw/vim-task.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
