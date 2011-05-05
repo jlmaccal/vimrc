@@ -320,6 +320,5 @@ set shellslash
 set grepprg=grep\ -nH\ $*
 filetype indent on
 let g:tex_flavor='latex'
-    
 
-
+iab <expr> ddate strftime("*** %a %d %b %Y ***")
