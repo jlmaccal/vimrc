@@ -321,4 +321,15 @@ set grepprg=grep\ -nH\ $*
 filetype indent on
 let g:tex_flavor='latex'
 
-iab <expr> ddate strftime("*** %a %d %b %Y ***")
+iab <expr> ddate strftime("## %a %d %b %Y")
+
+" vim-task
+noremap <silent> <buffer> T :call Toggle_task_status()<CR>
+inoremap <silent> <buffer> <C-T> <ESC>:call Toggle_task_status()<CR>i
+
+" supertab
+set completeopt=menuone,longest
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabRetainCompletionDuration = "completion"
+let g:SuperTabLongestEnhanced = 1
+let g:SuperTabLongestHighlight = 1
