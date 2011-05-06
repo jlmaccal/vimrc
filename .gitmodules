@@ -46,9 +46,9 @@
 [submodule "bundle/vim-task"]
 	path = bundle/vim-task
 	url = git://github.com/samsonw/vim-task.git
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/git-markdown"]
+	path = bundle/git-markdown
+	url = https://github.com/hallison/vim-markdown.git
