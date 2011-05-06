@@ -31,9 +31,6 @@
 [submodule "bundle/bufexplorer"]
 	path = bundle/bufexplorer
 	url = https://github.com/vim-scripts/bufexplorer.zip.git
-[submodule "bundle/vimtodo"]
-	path = bundle/vimtodo
-	url = https://github.com/mivok/vimtodo.git
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = https://github.com/jcf/vim-latex.git
