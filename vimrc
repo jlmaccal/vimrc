@@ -333,3 +333,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabRetainCompletionDuration = "completion"
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 1
+
+" tagbar hotkey
+nnoremap <silent> <F9> :TagbarToggle<CR>
+
