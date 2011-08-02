@@ -115,8 +115,10 @@ set nowb
 set noswapfile
 
 " turn on persistent undo
-set undodir=~/.vim/undodir
-set undofile
+if version >= 730
+    set undodir=~/.vim/undodir
+    set undofile
+endif
 
 
 """"""""""""""""""""""""""""""""""""
