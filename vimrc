@@ -130,7 +130,9 @@ set number
 syntax enable
 
 " Set font
-set gfn=Menlo:h14
+if has("macunix")
+    set gfn=Menlo:h14
+endif
 
 " set 256 colors
 set t_Co=256
