@@ -23,7 +23,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
-
+Bundle 'sjl/gundo.vim'
 
 filetype plugin indent on     " required! 
 
@@ -379,4 +379,7 @@ let g:SuperTabLongestHighlight = 1
 
 " tagbar hotkey
 nnoremap <silent> <F9> :TagbarToggle<CR>
+
+" Gundo hotkey
+nnoremap <F8> :GundoToggle<CR>
 
