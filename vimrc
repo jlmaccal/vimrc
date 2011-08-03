@@ -320,9 +320,9 @@ inoremap jj <esc>
 cnoremap jj <c-c>
 
 " ,v brings up vimrc file
-map <leader>v :sp ~/.vim/vimrc<CR><C-W>_
+nmap <leader>v :sp ~/.vim/vimrc<CR><C-W>_
 " ,V reloads vimrc file
-map <silent> <leader>V :source ~/.vim/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+nmap <silent> <leader>V :source ~/.vim/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " quick add newline with <CR>
 nmap <CR> o<esc>
@@ -382,4 +382,27 @@ nnoremap <silent> <F9> :TagbarToggle<CR>
 
 " Gundo hotkey
 nnoremap <F8> :GundoToggle<CR>
+
+" NERDTree hotkey
+nnoremap <F7> :NERDTreeToggle<CR>
+
+" Setup viminfo
+set viminfo='10,\"100,:20,%,n~/.viminfo
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+" Put tagbar on the left
+let g:tagbar_left = 1
+
+" NERDTree auto closes
+let g:NERDTreeQuitOnOpen = 1
 
