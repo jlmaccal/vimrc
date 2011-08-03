@@ -1,6 +1,47 @@
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+Bundle 'hallison/vim-markdown'
+Bundle 'olivierverdier/vim-latex-box'
+Bundle 'sjbach/lusty'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'vim-scripts/Obvious-Mode'
+Bundle 'msanders/snipmate.vim'
+Bundle 'ervandew/supertab'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-repeat'
+Bundle 'tpope/vim-surround'
+Bundle 'wincent/Command-T'
+
+
+filetype plugin indent on     " required! 
+
+"
+" Brief help
+"
+" :BundleInstall  - install bundles (won't update installed)
+" :BundleInstall! - update if installed
+"
+" :Bundles foo    - search for foo
+" :Bundles! foo   - refresh cached list and search for foo
+"
+" :BundleClean    - confirm removal of unused bundles
+" :BundleClean!   - remove without confirmation
+"
+" see :h vundle for more details
+" or wiki for FAQ
+" Note: comments after Bundle command are not allowed..
 
 
 
