@@ -377,8 +377,13 @@ let g:SuperTabRetainCompletionDuration = "completion"
 let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 1
 
-" tagbar hotkey
+" Tagbar
+" Hotkey
 nnoremap <silent> <F9> :TagbarToggle<CR>
+" Put tagbar on the left
+let g:tagbar_left = 1
+" Tagbar auto gets focus
+let g:tagbar_autofocus = 1
 
 " Gundo hotkey
 nnoremap <F8> :GundoToggle<CR>
@@ -399,9 +404,6 @@ augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
 augroup END
-
-" Put tagbar on the left
-let g:tagbar_left = 1
 
 " NERDTree auto closes
 let g:NERDTreeQuitOnOpen = 1
