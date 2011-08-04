@@ -25,6 +25,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
 Bundle 'sjl/gundo.vim'
 Bundle 'mileszs/ack.vim'
+Bundle 'Lokaltog/vim-easymotion'
 
 
 filetype plugin indent on     " required! 
@@ -405,4 +406,7 @@ augroup END
 
 " NERDTree auto closes
 let g:NERDTreeQuitOnOpen = 1
+
+" EasyMotion
+let g:EasyMotion_leader_key = '<Leader>m'
 
