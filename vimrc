@@ -24,6 +24,8 @@ Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
 Bundle 'sjl/gundo.vim'
+Bundle 'mileszs/ack.vim'
+
 
 filetype plugin indent on     " required! 
 
@@ -281,7 +283,7 @@ endfunction
 " => Cope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do :help cope if you are unsure what cope is. It's super useful!
-map <leader>cc :botright cope<cr>
+map <leader>co :botright cope<cr>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
