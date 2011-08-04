@@ -208,6 +208,7 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Close the current buffer
 map <leader>bd :Bclose<cr>
+map <leader>bw :bw<cr>
 
 " Close all the buffers
 map <leader>ba :1,300 bd!<cr>
@@ -304,14 +305,6 @@ map <leader>s? z=
 let python_highlight_all = 1
 
 
-
-""""""""""""""""""""""""""""""
-" => Relative number
-""""""""""""""""""""""""""""""
-map <leader>rn :RltvNmbr<CR>
-map <leader>rN :RltvNmbr!<CR>
-
-
 """"""""""""""""""""""""""""""
 " => key mappings
 """"""""""""""""""""""""""""""
@@ -320,7 +313,7 @@ inoremap jj <esc>
 cnoremap jj <c-c>
 
 " ,v brings up vimrc file
-nmap <leader>v :sp ~/.vim/vimrc<CR><C-W>_
+nmap <leader>v :e ~/.vim/vimrc<CR>
 " ,V reloads vimrc file
 nmap <silent> <leader>V :source ~/.vim/vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
