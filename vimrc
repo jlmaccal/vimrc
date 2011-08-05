@@ -31,7 +31,7 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'int3/vim-extradite'
 Bundle 'adrianolaru/vim-mustang.git'
 Bundle 'vim-scripts/desert256.vim'
-
+Bundle 'nathanaelkane/vim-indent-guides'
 
 filetype plugin indent on     " required! 
 
