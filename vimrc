@@ -28,6 +28,8 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'int3/vim-extradite'
+Bundle 'adrianolaru/vim-mustang.git'
 
 
 filetype plugin indent on     " required! 
@@ -142,7 +144,8 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme peaksea
+"colorscheme peaksea
+colorscheme mustang
 
 set encoding=utf8
 try
