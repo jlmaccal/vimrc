@@ -27,6 +27,7 @@ Bundle 'sjl/gundo.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gregsexton/gitv'
+Bundle 'tpope/vim-unimpaired'
 
 
 filetype plugin indent on     " required! 
