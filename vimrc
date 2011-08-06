@@ -34,6 +34,7 @@ Bundle 'vim-scripts/desert256.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'godlygeek/tabular'
 
 
 filetype plugin indent on     " required! 
