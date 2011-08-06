@@ -366,7 +366,7 @@ let g:SuperTabLongestHighlight = 1
 
 " Tagbar
 " Hotkey
-nnoremap <silent> <F9> :TagbarToggle<CR>
+nnoremap <silent> <leader>tt :TagbarToggle<CR>
 " Put tagbar on the left
 let g:tagbar_left = 1
 " Tagbar auto gets focus
@@ -374,10 +374,10 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
 " Gundo hotkey
-nnoremap <F8> :GundoToggle<CR>
+nnoremap <leader>uu :GundoToggle<CR>
 
 " NERDTree hotkey
-nnoremap <F7> :NERDTreeToggle<CR>
+nnoremap <leader>nn :NERDTreeToggle<CR>
 
 " Setup viminfo
 set viminfo='10,\"100,:20,%,n~/.viminfo
@@ -405,5 +405,5 @@ let g:statusline_enabled = 1
 let g:statusline_fullpath = 1
 
 " YankRing
-nnoremap <silent> <leader>yr :YRShow<CR>
+nnoremap <silent> <leader>yy :YRShow<CR>
 
