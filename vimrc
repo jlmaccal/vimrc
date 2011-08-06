@@ -225,6 +225,7 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Close the current buffer
 map <leader>bd :Bclose<cr>
+" Wipe the current buffer
 map <leader>bw :bw<cr>
 
 " Close all the buffers
@@ -334,12 +335,6 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
-
-iab <expr> ddate strftime("## %a %d %b %Y")
-
-" vim-task
-noremap <silent> <buffer> T :call Toggle_task_status()<CR>
-inoremap <silent> <buffer> <C-T> <ESC>:call Toggle_task_status()<CR>i
 
 " supertab
 set completeopt=menuone,longest
