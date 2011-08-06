@@ -335,10 +335,6 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" ,se to start buffer explorer
-nmap <script> <silent> <leader>ll :BufExplorer<CR>
-
-
 " Stuff for latex-suite
 set shellslash
 set grepprg=grep\ -nH\ $*
