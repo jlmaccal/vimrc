@@ -335,12 +335,6 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" Stuff for latex-suite
-set shellslash
-set grepprg=grep\ -nH\ $*
-filetype indent on
-let g:tex_flavor='latex'
-
 iab <expr> ddate strftime("## %a %d %b %Y")
 
 " vim-task
