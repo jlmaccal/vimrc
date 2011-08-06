@@ -247,7 +247,7 @@ For more:
 
 Let's you do insert completion using the tab key.
 
-Hit <tab> or <s-tab> to complete. Keep hitting to cycle. Press <ctrl-y> to
+Hit tab or s-tab to complete. Keep hitting to cycle. Press ctrl-y to
 select.
 
 
@@ -287,8 +287,8 @@ For more:
 ## Tagbar
 
 Press ,tt to open tagbar. This will produce a list of all symbols in the current
-source file. Select a symbol and press o or <enter> to jump to that location.
-Press <ctrl>-o and <ctrl>-i to navigate back and forth. Press q or ,tt to close
+source file. Select a symbol and press o or enter to jump to that location.
+Press ctrl-o and ctrl-i to navigate back and forth. Press q or ,tt to close
 the tagbar.
 
 
@@ -302,7 +302,7 @@ For more:
 Press ,uu to activate Gundo. This will show a window with the editing history of
 your file. Use j/k to move up and down. The diff window below will show the
 changes of each version. Press p to show a diff between the current version and
-the selected version. Press <enter> to open the selected version.
+the selected version. Press enter to open the selected version.
 
 For more:
 
@@ -311,7 +311,7 @@ For more:
 
 ## MRU
 
-Press ,mm to open a list of recently opened files. Press <enter> or o to open
+Press ,mm to open a list of recently opened files. Press enter or o to open
 and q to quit.
 
 ## Indent-guides

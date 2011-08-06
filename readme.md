@@ -16,6 +16,8 @@ a description of the installed plugins.
 
     git clone git@github.com:jlmaccal/vimrc.git .vim
 
+Actually, you should probably fork this on github and then clone your own version.
+
 ## Symlink vimrc
 
     ln -s .vimrc/vimrc_root .vimrc
