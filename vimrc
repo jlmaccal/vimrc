@@ -25,7 +25,7 @@ Bundle 'gmarik/vundle'
 
 " My Bundles here:
 "
-Bundle 'hallison/vim-markdown'
+Bundle 'robertwahler/vim-markdown'
 Bundle 'olivierverdier/vim-latex-box'
 Bundle 'sjbach/lusty'
 Bundle 'scrooloose/nerdcommenter'
