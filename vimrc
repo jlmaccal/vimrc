@@ -53,7 +53,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chrismetcalf/vim-yankring'
 Bundle 'vim-scripts/mru.vim'
-
+Bundle 'thinca/vim-ft-markdown_fold'
 
 filetype plugin indent on
 
