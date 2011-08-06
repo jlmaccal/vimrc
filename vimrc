@@ -35,6 +35,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
+Bundle 'altercation/vim-colors-solarized'
 
 
 filetype plugin indent on     " required! 
@@ -143,13 +144,13 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Menlo:h14
+    set gfn=Menlo:h16
 endif
 
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme peaksea
+colorscheme solarized
 
 
 set encoding=utf8
