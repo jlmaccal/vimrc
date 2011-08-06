@@ -36,6 +36,7 @@ Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'chrismetcalf/vim-yankring'
 
 
 filetype plugin indent on     " required! 
@@ -402,4 +403,7 @@ let g:EasyMotion_leader_key = '<Leader>m'
 let g:statusline_rvm = 0
 let g:statusline_enabled = 1
 let g:statusline_fullpath = 1
+
+" YankRing
+nnoremap <silent> <leader>yr :YRShow<CR>
 
