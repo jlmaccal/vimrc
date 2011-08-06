@@ -32,6 +32,9 @@ Bundle 'int3/vim-extradite'
 Bundle 'adrianolaru/vim-mustang.git'
 Bundle 'vim-scripts/desert256.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'dickeytk/status.vim'
+Bundle 'scrooloose/syntastic'
+
 
 filetype plugin indent on     " required! 
 
@@ -264,29 +267,6 @@ try
 catch
 endtry
 
-""""""""""""""""""""""""""""""
-" => Statusline
-""""""""""""""""""""""""""""""
-" Always hide the statusline
-set laststatus=2
-
-" Format the statusline
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ Line:\ %l/%L:%c
-
-
-function! CurDir()
-    let curdir = substitute(getcwd(), '/Users/jlmaccal/', "~/", "g")
-    return curdir
-endfunction
-
-function! HasPaste()
-    if &paste
-        return 'PASTE MODE  '
-    else
-        return ''
-    endif
-endfunction
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Cope
@@ -415,4 +395,9 @@ let g:NERDTreeQuitOnOpen = 1
 
 " EasyMotion
 let g:EasyMotion_leader_key = '<Leader>m'
+
+" Statusline
+let g:statusline_rvm = 0
+let g:statusline_enabled = 1
+let g:statusline_fullpath = 1
 
