@@ -8,6 +8,21 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
+" Brief help
+"
+" :BundleInstall  - install bundles (won't update installed)
+" :BundleInstall! - update if installed
+"
+" :Bundles foo    - search for foo
+" :Bundles! foo   - refresh cached list and search for foo
+"
+" :BundleClean    - confirm removal of unused bundles
+" :BundleClean!   - remove without confirmation
+"
+" see :h vundle for more details
+" or wiki for FAQ
+" Note: comments after Bundle command are not allowed..
+
 " My Bundles here:
 "
 Bundle 'hallison/vim-markdown'
@@ -40,35 +55,13 @@ Bundle 'chrismetcalf/vim-yankring'
 Bundle 'vim-scripts/mru.vim'
 
 
-filetype plugin indent on     " required! 
-
-"
-" Brief help
-"
-" :BundleInstall  - install bundles (won't update installed)
-" :BundleInstall! - update if installed
-"
-" :Bundles foo    - search for foo
-" :Bundles! foo   - refresh cached list and search for foo
-"
-" :BundleClean    - confirm removal of unused bundles
-" :BundleClean!   - remove without confirmation
-"
-" see :h vundle for more details
-" or wiki for FAQ
-" Note: comments after Bundle command are not allowed..
-
-
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""
 " General Setup
 """"""""""""""""""""""""""""""""""""
 " set how many lines of history vim remembers
 set history=700
-
-" enable filetype plugin
-filetype plugin on
-filetype indent on
 
 " set to autoread a file when it is changed from the outside
 set autoread
@@ -131,8 +124,6 @@ set mat=2
 " no sound on errors
 "set noerrorbells
 set visualbell
-"set t_vb=
-"set tm=500
 
 " turn on line numbering
 set number
@@ -197,18 +188,6 @@ set ai
 " smart indent
 set si
 
-
-""""""""""""""""""""""""""""""""""""
-" Visual mode related
-""""""""""""""""""""""""""""""""""""
-" In visual mode press * or # to match current selection
-vnoremap <silent> * :call VisualSearch('f')<CR>
-vnoremap <silent> # :call VisualSearch('b')<CR>
-
-" When you press gv you vimgrep after the selected text
-vnoremap <silent> gv :call VisualSearch('gv')<CR>
-map <leader>g :vimgrep // **/*.<left><left><left><left><left><left><left>
-
 " make shifts keep visual selection
 vnoremap < <gv
 vnoremap > >gv
@@ -224,15 +203,14 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-" Wipe the current buffer
+" Get rid of the current buffer - buffer wipeout
 map <leader>bw :bw<cr>
 
 " Close all the buffers
 map <leader>ba :1,300 bd!<cr>
 
 " Use the arrows to something usefull
+" press left and right to scroll through open buffers
 map <right> :bn<cr>
 map <left> :bp<cr>
 
@@ -277,10 +255,13 @@ endtry
 " => Cope
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Do :help cope if you are unsure what cope is. It's super useful!
+" Press ,co to open the quuickfix window
+" Press ,n to jump to the next item
+" Press ,p to jump to the previous line
+" unimpaired plugin also sets [q and ]q for these actions
 map <leader>co :botright cope<cr>
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
@@ -289,10 +270,14 @@ map <leader>p :cp<cr>
 map <leader>s :setlocal spell!<cr>
 
 "Shortcuts using <leader>
+" ,sn for next spelling mistake
 map <leader>sn ]s
+" ,sp for previous spelling mistake
 map <leader>sp [s
+" ,sa add word under cursor as a good word
 map <leader>sa zg
-map <leader>s? z=
+" ,sc to suggest corrected spellings for current word
+map <leader>sc z=
 
 
 """"""""""""""""""""""""""""""
@@ -332,12 +317,16 @@ nmap <leader>8 "8p
 nmap <leader>9 "9p
 
 " moving between splits
+" press <ctrl>-j to move up, etc
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
 " supertab
+" press tab to start completion
+" press tab again to cycle through completions
+" press ctrl-y to accept suggested completion
 set completeopt=menuone,longest
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabRetainCompletionDuration = "completion"
@@ -345,7 +334,8 @@ let g:SuperTabLongestEnhanced = 1
 let g:SuperTabLongestHighlight = 1
 
 " Tagbar
-" Hotkey
+" press ,tt to open up the tagbar
+" select a function to jump to and press <CR>
 nnoremap <silent> <leader>tt :TagbarToggle<CR>
 " Put tagbar on the left
 let g:tagbar_left = 1
@@ -354,12 +344,19 @@ let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
 
 " Gundo hotkey
+" press ,uu to open up a window containing the editing history of the current file
+" press <ctrl>-w <ctrl>-w to cycle between undo and editing window
+" press ,uu again to close
 nnoremap <leader>uu :GundoToggle<CR>
 
 " NERDTree hotkey
+" press ,nn to toggle NERDTree display
+" press ? for help
 nnoremap <leader>nn :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
 
 " Setup viminfo
+" Keep things persistant between editing sessions
 set viminfo='10,\"100,:20,%,n~/.viminfo
 function! ResCur()
   if line("'\"") <= line("$")
@@ -373,19 +370,29 @@ augroup resCur
   autocmd BufWinEnter * call ResCur()
 augroup END
 
-" NERDTree auto closes
-let g:NERDTreeQuitOnOpen = 1
-
 " EasyMotion
+" Adds the following motion commands:
+" ,mj   Move up lines
+" ,mk   Move down lines
+" ,mf   Find character
+" ,mF   Find character backwards
+" plus some more. See :h easymotion
 let g:EasyMotion_leader_key = '<Leader>m'
 
 " Statusline
+" setup the status line plugin
 let g:statusline_rvm = 0
 let g:statusline_enabled = 1
 let g:statusline_fullpath = 1
 
 " YankRing
+" press ,yy to pull up the yank ring
+" Press p to paste the selected text
+" For more, see :h yankring
 nnoremap <silent> <leader>yy :YRShow<CR>
 
 " MRU
+" Press ,mm to see a list of recently used files.
+" Press o to open. Press q to quit.
 nnoremap <silent> <leader>mm :MRU<CR>
+
