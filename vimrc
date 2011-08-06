@@ -335,12 +335,6 @@ map <c-k> <c-w>k
 map <c-l> <c-w>l
 map <c-h> <c-w>h
 
-" PyDoc
-" http://www.vim.org/scripts/script.php?script_id=910
-" Search python docs for the keyword
-" <leader>pw - search for docs for what's under cursor
-" <leader>pW - search for any docs with this keyword mentioned
-
 " ,se to start buffer explorer
 nmap <script> <silent> <leader>ll :BufExplorer<CR>
 
