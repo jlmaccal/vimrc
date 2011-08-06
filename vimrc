@@ -37,6 +37,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chrismetcalf/vim-yankring'
+Bundle 'vim-scripts/mru.vim'
 
 
 filetype plugin indent on     " required! 
@@ -386,3 +387,5 @@ let g:statusline_fullpath = 1
 " YankRing
 nnoremap <silent> <leader>yy :YRShow<CR>
 
+" MRU
+nnoremap <silent> <leader>mm :MRU<CR>
