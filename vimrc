@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " Brief help
@@ -54,6 +54,7 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'chrismetcalf/vim-yankring'
 Bundle 'vim-scripts/mru.vim'
 Bundle 'thinca/vim-ft-markdown_fold'
+Bundle 'bronson/vim-trailing-whitespace'
 
 filetype plugin indent on
 
@@ -243,7 +244,7 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-" Specify the behavior when switching between buffers 
+" Specify the behavior when switching between buffers
 try
   set switchbuf=usetab
   set stal=2
