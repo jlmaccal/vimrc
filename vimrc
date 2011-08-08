@@ -55,6 +55,8 @@ Bundle 'chrismetcalf/vim-yankring'
 Bundle 'vim-scripts/mru.vim'
 Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
+Bundle 'rson/vim-conque'
+
 
 filetype plugin indent on
 

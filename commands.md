@@ -472,3 +472,16 @@ see:
 
     :h snipmate
 
+## ConqueTerm
+
+ConqueTerm is a plugin that turns a vim buffer into an interactive window so you
+can run and interact with terminal commands.
+
+    :ConqueTerm bash                Will start a terminal with bash as the
+                                    shell.
+    <F8>                            Use insert mode to edit the terminal
+    <F9>                            Send selected text to buffer
+    <F10>                           Send the entire file to the buffer
+    <F11>                           Execute the current file in a new buffer
+    <esc><esc>                      Press <esc> twice to send an escape char to
+                                    the terminal window.
