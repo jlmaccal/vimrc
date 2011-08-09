@@ -141,7 +141,7 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Menlo:h16
+    set gfn=Menlo:h14
 endif
 
 " set 256 colors
