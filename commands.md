@@ -134,6 +134,7 @@ For more:
     :Gstatus            Interactive status window.
     ctrl-n / ctrl-p     Move between fiels
     -                   Stage / unstage a file
+    <CR>                Open file under cursor
     p                   Begin selecting patches
     enter               Open file under cursor
     shift-C             Open commmit window
@@ -157,6 +158,16 @@ For more:
     :Gcommit            Open commit window
     :Git command        Run git command
     :Gblame             Run git blame command on current file
+
+Staging hunks with fugitive:
+
+    :Gdiff              Bring up diff
+    :Gread / Gwrite     Reconcile index with working copy
+    :diffget / diffput
+    :w                  Save modified files and just hunks with be staged
+    :diffupdate         Update the diff highlighting
+    do                  diff obtain
+    dp                  diff put
 
 
 For more:
