@@ -57,6 +57,7 @@ Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'rson/vim-conque'
 Bundle 'sjl/threesome.vim'
+Bundle 'xolox/vim-notes'
 
 
 filetype plugin indent on
@@ -401,6 +402,10 @@ nnoremap <silent> <leader>mm :MRU<CR>
 " ,fb = fast buffer
 nmap <silent> <Leader>ff :CommandT<CR>
 nmap <silent> <Leader>fb :CommandTBuffer<CR>
+
 " notes
-"let g:notes_suffix = '.md'
+" set the notes directory
+let g:notes_directory = '~/Notes'
+nnoremap <silent> <leader>ns :NoteFromSelectedText
+
 

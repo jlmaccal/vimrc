@@ -193,8 +193,10 @@ is similar to the Command-T option in TextMate or Launchbar.
 Basically, press ,t and then start typing characters from the file until you
 narrow it down to the one you want. Then hit enter to open it.
 
-    ,t                  Start command-t file opener
+    ,ff                 Start command-t file opener
                         Now type characters from the path/filename
+                        ff = fuzzy find
+    ,fb                 Same but for buffers. fb = fuzzy buffer
     <enter>             Open the selected file
     <C-s>               Open the selected file in split
     <C-v>               Open the selected file in a vertical split
@@ -485,3 +487,20 @@ can run and interact with terminal commands.
     <F11>                           Execute the current file in a new buffer
     <esc><esc>                      Press <esc> twice to send an escape char to
                                     the terminal window.
+
+## Notes
+
+All notes are stored in a central directory and are easily accessed with the
+:Notes command.
+
+    :Note                           Starts a new blank note. Filename will be
+                                    set based on the title
+    :Note blah                      Will load a note with blah in the title or
+                                    create a new blank note if there is none.
+    :DeleteNote                     Deletes the current note
+    :SearchNotes kw1 kw2            Find notes with both kw1 and kw2
+    :SearchNotes /regex/            Search for notes matching regex
+    :SearchNotes                    Search for word under the cursor
+    :RelatedNotes                   Find all notes related to current file
+    :RecentNotes                    Lists notes by modification date
+
