@@ -394,3 +394,13 @@ nnoremap <silent> <leader>yy :YRShow<CR>
 " Press o to open. Press q to quit.
 nnoremap <silent> <leader>mm :MRU<CR>
 
+" Remap command-T
+" This is confusing given the name of the plugin, but
+" this doesn't interfere with ,tt for tags.
+" ,ff = fast find
+" ,fb = fast buffer
+nmap <silent> <Leader>ff :CommandT<CR>
+nmap <silent> <Leader>fb :CommandTBuffer<CR>
+" notes
+"let g:notes_suffix = '.md'
+
