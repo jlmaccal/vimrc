@@ -57,8 +57,8 @@ Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'rson/vim-conque'
 Bundle 'sjl/threesome.vim'
-Bundle 'xolox/vim-notes'
-
+Bundle 'fmoralesc/vim-pad'
+Bundle 'xolox/vim-shell'
 
 filetype plugin indent on
 
@@ -74,6 +74,10 @@ set autoread
 " map the leader to comma instead of backslash
 let mapleader = ","
 let g:mapleader = ","
+
+" map the local leader to backslash
+let maplocalleader = "\\"
+let g:maplocalleader = "\\"
 
 " set the shell
 set shell=/bin/bash
@@ -266,7 +270,7 @@ map <leader>p :cp<cr>
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Pressing ,s will toggle and untoggle spell checking
-map <leader>s :setlocal spell!<cr>
+map <leader>z :setlocal spell!<cr>
 
 "Shortcuts using <leader>
 " ,sn for next spelling mistake
@@ -408,4 +412,14 @@ nmap <silent> <Leader>fb :CommandTBuffer<CR>
 let g:notes_directory = '~/Notes'
 nnoremap <silent> <leader>ns :NoteFromSelectedText
 
+" setup local leader key
+"
+
+" Setup vim-pad
+let g:pad_dir = '~/notes/'
+let g:pad_search_backend = "ack"
+let g:pad_window_height = 20
+
+" UTL
+let g:utl_cfg_hdl_scm_http_system = "silent !open -a Safari '%u#%f'"
 
