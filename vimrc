@@ -60,6 +60,8 @@ Bundle 'xolox/vim-shell'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'olethanh/Vim-nosecompiler'
 Bundle 'reinh/vim-makegreen'
+Bundle 'fs111/pydoc.vim'
+
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""
@@ -90,7 +92,7 @@ set scrolloff=5
 set sidescrolloff=5
 
 " turn on wild menu
-set wildmode=longest:full
+set wildmode=list:full
 set wildmenu
 
 " always show the current position
@@ -157,7 +159,7 @@ colorscheme solarized
 
 set encoding=utf8
 try
-	lang en_US
+    lang en_US
 catch
 endtry
 
@@ -324,7 +326,8 @@ map <c-h> <c-w>h
 " press tab to start completion
 " press tab again to cycle through completions
 " press ctrl-y to accept suggested completion
-set completeopt=menuone,longest
+set completeopt=menuone,longest,preview
+au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabRetainCompletionDuration = "completion"
 let g:SuperTabLongestEnhanced = 1
@@ -385,7 +388,7 @@ let g:statusline_fullpath = 1
 " YankRing
 " press ,yy to pull up the yank ring
 " Press p to paste the selected text
-" For more, see :h yankring
+let g:yankring_history_dir = '$HOME/.vim/.tmp'
 nnoremap <silent> <leader>yy :YRShow<CR>
 
 " MRU
@@ -401,14 +404,10 @@ nnoremap <silent> <leader>mm :MRU<CR>
 nmap <silent> <Leader>ff :CommandT<CR>
 nmap <silent> <Leader>fb :CommandTBuffer<CR>
 
-" notes
-" set the notes directory
-let g:notes_directory = '~/Notes'
-nnoremap <silent> <leader>ns :NoteFromSelectedText
-
 " set so that we can use vim with nose testing
 " use ,qq to do nose test
 autocmd BufNewFile,BufRead *.py compiler nose
+autocmd BufNewFile,BufRead *.py set nosmartindent
 
 " set syntastic to always check file on read
  let g:syntastic_check_on_open=1
