@@ -342,6 +342,8 @@ let g:tagbar_left = 1
 " Tagbar auto gets focus
 let g:tagbar_autofocus = 1
 let g:tagbar_autoclose = 1
+" sort by file order
+let g:tagbar_sort = 0
 
 " Gundo hotkey
 " press ,uu to open up a window containing the editing history of the current file
