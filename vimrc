@@ -43,7 +43,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-unimpaired'
-Bundle 'int3/vim-extradite'
 Bundle 'vim-scripts/desert256.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
@@ -417,4 +416,8 @@ autocmd BufNewFile,BufRead *.py set nosmartindent
 " set highlihgting for curson line and column
 set cursorline
 set cursorcolumn
+
+" set ,gg  and ,GG mapping for gitv browser and file mode
+nmap <silent> <leader>gg :Gitv<CR>
+nmap <silent> <leader>GG :Gitv!<CR>
 
