@@ -212,12 +212,6 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Get rid of the current buffer - buffer wipeout
-map <leader>bw :bw<cr>
-
-" Close all the buffers
-map <leader>ba :1,300 bd!<cr>
-
 " Use the arrows to something usefull
 " press left and right to scroll through open buffers
 map <right> :bn<cr>
