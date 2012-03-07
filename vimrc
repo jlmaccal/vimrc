@@ -44,7 +44,6 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'int3/vim-extradite'
-Bundle 'adrianolaru/vim-mustang.git'
 Bundle 'vim-scripts/desert256.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'dickeytk/status.vim'
@@ -57,9 +56,10 @@ Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'rson/vim-conque'
 Bundle 'sjl/threesome.vim'
-Bundle 'fmoralesc/vim-pad'
 Bundle 'xolox/vim-shell'
-
+Bundle 'bkad/CamelCaseMotion'
+Bundle 'olethanh/Vim-nosecompiler'
+Bundle 'reinh/vim-makegreen'
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""
@@ -412,14 +412,14 @@ nmap <silent> <Leader>fb :CommandTBuffer<CR>
 let g:notes_directory = '~/Notes'
 nnoremap <silent> <leader>ns :NoteFromSelectedText
 
-" setup local leader key
-"
+" set so that we can use vim with nose testing
+" use ,qq to do nose test
+autocmd BufNewFile,BufRead *.py compiler nose
 
-" Setup vim-pad
-let g:pad_dir = '~/notes/'
-let g:pad_search_backend = "ack"
-let g:pad_window_height = 20
+" set syntastic to always check file on read
+ let g:syntastic_check_on_open=1
 
-" UTL
-let g:utl_cfg_hdl_scm_http_system = "silent !open -a Safari '%u#%f'"
+" set highlihgting for curson line and column
+set cursorline
+set cursorcolumn
 
