@@ -314,13 +314,6 @@ nmap <leader>7 "7p
 nmap <leader>8 "8p
 nmap <leader>9 "9p
 
-" moving between splits
-" press <ctrl>-j to move up, etc
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
 " supertab
 " press tab to start completion
 " press tab again to cycle through completions
@@ -420,4 +413,26 @@ set cursorcolumn
 " set ,gg  and ,GG mapping for gitv browser and file mode
 nmap <silent> <leader>gg :Gitv<CR>
 nmap <silent> <leader>GG :Gitv!<CR>
+
+" Aweseome window management stuff
+"
+function! WinMove(key)
+  let t:curwin = winnr()
+  exec "wincmd ".a:key
+  if (t:curwin == winnr()) "we havent moved
+    if (match(a:key,'[jk]')) "were we going up/down
+      wincmd v
+    else
+      wincmd s
+    endif
+    exec "wincmd ".a:key
+  endif
+endfunction
+
+" ,h moves to the window to the left
+" if there isn't a window there, then we create one
+map <c-h>              :call WinMove('h')<cr>
+map <c-k>              :call WinMove('k')<cr>
+map <c-l>              :call WinMove('l')<cr>
+map <c-j>              :call WinMove('j')<cr>
 
