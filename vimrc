@@ -91,7 +91,7 @@ set scrolloff=5
 set sidescrolloff=5
 
 " turn on wild menu
-set wildmode=list:full
+set wildmode=list:longest
 set wildmenu
 
 " always show the current position
@@ -435,4 +435,5 @@ map <c-h>              :call WinMove('h')<cr>
 map <c-k>              :call WinMove('k')<cr>
 map <c-l>              :call WinMove('l')<cr>
 map <c-j>              :call WinMove('j')<cr>
+map <leader>x          <C-w>c
 
