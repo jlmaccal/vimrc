@@ -45,7 +45,6 @@ Bundle 'gregsexton/gitv'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'vim-scripts/desert256.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'dickeytk/status.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
@@ -61,6 +60,8 @@ Bundle 'olethanh/Vim-nosecompiler'
 Bundle 'reinh/vim-makegreen'
 Bundle 'fs111/pydoc.vim'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'Lokaltog/vim-powerline'
+
 
 filetype plugin indent on
 
@@ -441,4 +442,7 @@ map <leader>x          <C-w>c
 " command to toggle rainbow parentheses
 " sometimes useful for understanding nested expressions
 nmap <leader>rr :RainbowParenthesesToggle<cr>
+
+" tell powerline to use the solarized colorscheme
+let g:Powerline_colorscheme = "solarized"
 
