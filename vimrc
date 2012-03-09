@@ -149,7 +149,8 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Menlo:h14
+    set gfn=Menlo\ for\ Powerline:h14
+    "set gfn=Menlo:h14
 endif
 
 " set 256 colors
@@ -375,12 +376,6 @@ augroup END
 " plus some more. See :h easymotion
 let g:EasyMotion_leader_key = '<Leader>m'
 
-" Statusline
-" setup the status line plugin
-let g:statusline_rvm = 0
-let g:statusline_enabled = 1
-let g:statusline_fullpath = 1
-
 " YankRing
 " press ,yy to pull up the yank ring
 " Press p to paste the selected text
@@ -443,6 +438,10 @@ map <leader>x          <C-w>c
 " sometimes useful for understanding nested expressions
 nmap <leader>rr :RainbowParenthesesToggle<cr>
 
+" powerline config
+set laststatus=2
 " tell powerline to use the solarized colorscheme
 let g:Powerline_colorscheme = "solarized"
+" tell powerline to use the fancy new fonts
+let g:Powerline_symbols = "fancy"
 
