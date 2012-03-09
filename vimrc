@@ -60,6 +60,7 @@ Bundle 'bkad/CamelCaseMotion'
 Bundle 'olethanh/Vim-nosecompiler'
 Bundle 'reinh/vim-makegreen'
 Bundle 'fs111/pydoc.vim'
+Bundle 'kien/rainbow_parentheses.vim'
 
 filetype plugin indent on
 
@@ -436,4 +437,8 @@ map <c-k>              :call WinMove('k')<cr>
 map <c-l>              :call WinMove('l')<cr>
 map <c-j>              :call WinMove('j')<cr>
 map <leader>x          <C-w>c
+
+" command to toggle rainbow parentheses
+" sometimes useful for understanding nested expressions
+nmap <leader>rr :RainbowParenthesesToggle<cr>
 
