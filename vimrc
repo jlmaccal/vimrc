@@ -318,7 +318,7 @@ nmap <leader>9 "9p
 " press tab to start completion
 " press tab again to cycle through completions
 " press ctrl-y to accept suggested completion
-set completeopt=menuone,longest,preview
+set completeopt=menuone,longest
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabRetainCompletionDuration = "completion"
