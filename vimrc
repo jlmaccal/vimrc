@@ -37,7 +37,6 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-repeat'
 Bundle 'tpope/vim-surround'
-Bundle 'wincent/Command-T'
 Bundle 'sjl/gundo.vim'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
@@ -61,8 +60,8 @@ Bundle 'reinh/vim-makegreen'
 Bundle 'fs111/pydoc.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'fmoralesc/vim-pad'
 Bundle 'vim-scripts/ZoomWin'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
