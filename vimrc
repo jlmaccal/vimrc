@@ -95,6 +95,7 @@ set sidescrolloff=5
 " turn on wild menu
 set wildmode=list:longest
 set wildmenu
+set wildignore+=*.so,*.zip,*.pyc
 
 " always show the current position
 set ruler
