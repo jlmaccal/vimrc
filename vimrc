@@ -61,7 +61,8 @@ Bundle 'reinh/vim-makegreen'
 Bundle 'fs111/pydoc.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Lokaltog/vim-powerline'
-
+Bundle 'fmoralesc/vim-pad'
+Bundle 'vim-scripts/ZoomWin'
 
 filetype plugin indent on
 
@@ -149,7 +150,7 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Menlo\ for\ Powerline:h14
+    set gfn=Menlo\ for\ Powerline:h16
     "set gfn=Menlo:h14
 endif
 
@@ -445,3 +446,7 @@ let g:Powerline_colorscheme = "solarized"
 " tell powerline to use the fancy new fonts
 let g:Powerline_symbols = "fancy"
 
+
+" setup vim-pad
+let g:pad_dir = "/Volumes/macbook/Users/jlmaccal/Documents/Notes"
+let g:pad_window_height = 30
