@@ -515,3 +515,13 @@ All notes are stored in a central directory and are easily accessed with the
     :RelatedNotes                   Find all notes related to current file
     :RecentNotes                    Lists notes by modification date
 
+## Indent-object
+
+This plugin adds objects that are useful for editing python blocks.
+
+    ai      An indentation level and line above
+    ii      An indentation level
+    aI      An indentation level and lines above/below
+
+    vii     Select the current indent level in visual mode
+    cii     Change the current block
