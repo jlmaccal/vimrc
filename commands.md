@@ -525,3 +525,7 @@ This plugin adds objects that are useful for editing python blocks.
 
     vii     Select the current indent level in visual mode
     cii     Change the current block
+## Smart-input
+
+This plugin adds in mappings to automatically add closing braces, quotes, etc.
+This works similarly to how things worked in TextMate.

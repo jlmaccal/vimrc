@@ -63,6 +63,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'kien/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'kana/vim-smartinput'
 
 filetype plugin indent on
 
