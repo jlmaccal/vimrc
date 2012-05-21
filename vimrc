@@ -158,7 +158,8 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme smyck
 
 
 set encoding=utf8
@@ -443,7 +444,7 @@ nmap <leader>rr :RainbowParenthesesToggle<cr>
 " powerline config
 set laststatus=2
 " tell powerline to use the solarized colorscheme
-let g:Powerline_colorscheme = "solarized"
+"let g:Powerline_colorscheme = "solarized"
 " tell powerline to use the fancy new fonts
 let g:Powerline_symbols = "fancy"
 
