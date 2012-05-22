@@ -31,7 +31,6 @@ Bundle 'sjbach/lusty'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/Obvious-Mode'
-Bundle 'msanders/snipmate.vim'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-fugitive'
@@ -63,7 +62,7 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'vim-scripts/ZoomWin'
 Bundle 'kien/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
-
+Bundle 'SirVer/ultisnips'
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""
