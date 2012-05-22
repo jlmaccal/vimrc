@@ -63,6 +63,7 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'kien/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'SirVer/ultisnips'
+
 filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""
@@ -413,29 +414,6 @@ set cursorcolumn
 nmap <silent> <leader>gg :Gitv<CR>
 nmap <silent> <leader>GG :Gitv!<CR>
 
-" Aweseome window management stuff
-"
-function! WinMove(key)
-  let t:curwin = winnr()
-  exec "wincmd ".a:key
-  if (t:curwin == winnr()) "we havent moved
-    if (match(a:key,'[jk]')) "were we going up/down
-      wincmd v
-    else
-      wincmd s
-    endif
-    exec "wincmd ".a:key
-  endif
-endfunction
-
-" ,h moves to the window to the left
-" if there isn't a window there, then we create one
-map <c-h>              :call WinMove('h')<cr>
-map <c-k>              :call WinMove('k')<cr>
-map <c-l>              :call WinMove('l')<cr>
-map <c-j>              :call WinMove('j')<cr>
-map <leader>x          <C-w>c
-
 " command to toggle rainbow parentheses
 " sometimes useful for understanding nested expressions
 nmap <leader>rr :RainbowParenthesesToggle<cr>
@@ -447,7 +425,3 @@ set laststatus=2
 " tell powerline to use the fancy new fonts
 let g:Powerline_symbols = "fancy"
 
-
-" setup vim-pad
-let g:pad_dir = "/Volumes/macbook/Users/jlmaccal/Documents/Notes"
-let g:pad_window_height = 30
