@@ -407,8 +407,8 @@ autocmd BufNewFile,BufRead *.py set nosmartindent
  let g:syntastic_check_on_open=1
 
 " set highlihgting for curson line and column
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 
 " set ,gg  and ,GG mapping for gitv browser and file mode
 nmap <silent> <leader>gg :Gitv<CR>
@@ -423,5 +423,4 @@ set laststatus=2
 " tell powerline to use the solarized colorscheme
 "let g:Powerline_colorscheme = "solarized"
 " tell powerline to use the fancy new fonts
-let g:Powerline_symbols = "fancy"
-
+"let g:Powerline_symbols = "fancy"
