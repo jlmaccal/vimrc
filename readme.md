@@ -3,9 +3,10 @@
 Requires python and ruby support to be installed in vim. I recommend installing
 by [homebrew][brew].
 
-See below for installation and bundle managment.
+    brew install macvim --override-system-vim
 
-See file commands.md for handy commands and a description of the installed plugins.
+See below for installation and bundle managment. See file commands.md for handy
+commands and a description of the installed plugins.
 
 [brew]: http://mxcl.github.com/homebrew/
 
