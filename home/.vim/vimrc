@@ -256,18 +256,6 @@ endtry
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Cope
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Do :help cope if you are unsure what cope is. It's super useful!
-" Press ,co to open the quuickfix window
-" Press ,n to jump to the next item
-" Press ,p to jump to the previous line
-" unimpaired plugin also sets [q and ]q for these actions
-map <leader>co :botright cope<cr>
-map <leader>n :cn<cr>
-map <leader>p :cp<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Pressing ,s will toggle and untoggle spell checking
@@ -424,3 +412,4 @@ set laststatus=2
 "let g:Powerline_colorscheme = "solarized"
 " tell powerline to use the fancy new fonts
 "let g:Powerline_symbols = "fancy"
+"
