@@ -63,6 +63,7 @@ Bundle 'vim-scripts/ZoomWin'
 Bundle 'kien/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'SirVer/ultisnips'
+Bundle 'vim-scripts/Lucius'
 
 filetype plugin indent on
 
@@ -158,8 +159,7 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme solarized
-"colorscheme smyck
+colorscheme lucius
 
 
 set encoding=utf8
