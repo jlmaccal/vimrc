@@ -159,7 +159,7 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme lucius
+colorscheme solarized
 
 
 set encoding=utf8
@@ -378,16 +378,9 @@ nnoremap <silent> <leader>yy :YRShow<CR>
 " Press o to open. Press q to quit.
 nnoremap <silent> <leader>mm :MRU<CR>
 
-" Remap command-T
-" This is confusing given the name of the plugin, but
-" this doesn't interfere with ,tt for tags.
-" ,ff = fast find
-" ,fb = fast buffer
-nmap <silent> <Leader>ff :CommandT<CR>
-nmap <silent> <Leader>fb :CommandTBuffer<CR>
-
 " set so that we can use vim with nose testing
 " use ,qq to do nose test
+map <silent> <Leader>qq :call MakeGreen()<cr>
 autocmd BufNewFile,BufRead *.py compiler nose
 autocmd BufNewFile,BufRead *.py set nosmartindent
 
