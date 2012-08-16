@@ -435,4 +435,5 @@ map <C-h> <C-w><Left>
 "   ]=           : Jump to next line having same marker
 "   ]-           : Jump to prev line having same marker
 "   m<BackSpace> : Remove all markers
-"
+
+highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
