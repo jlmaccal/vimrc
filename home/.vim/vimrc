@@ -61,6 +61,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/Lucius'
+Bundle 'kshenoy/vim-signature'
 
 filetype plugin indent on
 
@@ -415,3 +416,23 @@ map <C-j> <C-w><Down>
 map <C-l> <C-w><Right>
 map <C-h> <C-w><Left>
 
+" vim-signature - for setting and showing marks
+"
+" m[a-zA-Z]    : Toggle mark
+"   m<Space>     : Delete all marks
+"   m,           : Place the next available mark
+"   ]`           : Jump to next mark
+"   [`           : Jump to prev mark
+"   ]'           : Jump to start of next line containing a mark
+"   ['           : Jump to start of prev line containing a mark
+"   `]           : Jump by alphabetical order to next mark
+"   `[           : Jump by alphabetical order to prev mark
+"   ']           : Jump by alphabetical order to start of next line containing a mark
+"   '[           : Jump by alphabetical order to start of prev line containing a mark
+"
+"   m[0-9]       : Toggle the corresponding marker !@#$%^&*()
+"   m<S-[0-9]>   : Remove all markers of the same type
+"   ]=           : Jump to next line having same marker
+"   ]-           : Jump to prev line having same marker
+"   m<BackSpace> : Remove all markers
+"
