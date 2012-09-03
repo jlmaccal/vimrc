@@ -27,7 +27,36 @@ snippet todo "TODO item" b
 # TODO: `echo $USER` `!v strftime("%B %d, %Y")`: ${1:todo item}
 endsnippet
 
-snippet enum "Enumerate visual"
-enumerate(${VISUAL}$0)
+snippet enum "Enumerate visual" i
+enumerate(${1:${VISUAL:x}})$0
+endsnippet
+
+snippet int "int visual" i
+int(${1:${VISUAL:x}})$0
+endsnippet
+
+snippet float "float visual" i
+float(${1:${VISUAL:x}})$0
+endsnippet
+
+snippet array "array visual" i
+numpy.array(${1:${VISUAL:x}})$0
+endsnippet
+
+snippet rwprop "read-write property" b!
+@property
+def ${1:prop_name}(self):
+    return self._$1
+@$1.setter
+def $1(self, new_value):
+    self._$1 = new_value
+$0
+endsnippet
+
+snippet prop "read only property" b!
+@property
+def ${1:property_name}(self):
+    return self._$1
+$0
 endsnippet
 
