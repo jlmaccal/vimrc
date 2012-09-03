@@ -47,7 +47,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'chrismetcalf/vim-yankring'
-Bundle 'vim-scripts/mru.vim'
 Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'rson/vim-conque'
@@ -56,14 +55,13 @@ Bundle 'xolox/vim-shell'
 Bundle 'bkad/CamelCaseMotion'
 Bundle 'olethanh/Vim-nosecompiler'
 Bundle 'reinh/vim-makegreen'
-Bundle 'fs111/pydoc.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'vim-scripts/ZoomWin'
 Bundle 'kien/ctrlp.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/Lucius'
+Bundle 'kshenoy/vim-signature'
 
 filetype plugin indent on
 
@@ -281,9 +279,9 @@ let python_highlight_all = 1
 """"""""""""""""""""""""""""""
 " => key mappings
 """"""""""""""""""""""""""""""
-" set jj to be <esc>
-inoremap jj <esc>
-cnoremap jj <c-c>
+" set jk to be <esc>
+inoremap jk <esc>
+cnoremap jk <c-c>
 
 " ,v brings up vimrc file
 nmap <leader>v :e ~/.vim/vimrc<CR>
@@ -373,21 +371,9 @@ let g:EasyMotion_leader_key = '<Leader>m'
 let g:yankring_history_dir = '$HOME/.vim/.tmp'
 nnoremap <silent> <leader>yy :YRShow<CR>
 
-" MRU
-" Press ,mm to see a list of recently used files.
-" Press o to open. Press q to quit.
-nnoremap <silent> <leader>mm :MRU<CR>
-
-" Remap command-T
-" This is confusing given the name of the plugin, but
-" this doesn't interfere with ,tt for tags.
-" ,ff = fast find
-" ,fb = fast buffer
-nmap <silent> <Leader>ff :CommandT<CR>
-nmap <silent> <Leader>fb :CommandTBuffer<CR>
-
 " set so that we can use vim with nose testing
 " use ,qq to do nose test
+map <silent> <Leader>qq :call MakeGreen()<cr>
 autocmd BufNewFile,BufRead *.py compiler nose
 autocmd BufNewFile,BufRead *.py set nosmartindent
 
@@ -395,7 +381,7 @@ autocmd BufNewFile,BufRead *.py set nosmartindent
  let g:syntastic_check_on_open=1
 
 " set highlihgting for curson line and column
-"set cursorline
+set cursorline
 "set cursorcolumn
 
 " set ,gg  and ,GG mapping for gitv browser and file mode
@@ -412,4 +398,42 @@ set laststatus=2
 "let g:Powerline_colorscheme = "solarized"
 " tell powerline to use the fancy new fonts
 "let g:Powerline_symbols = "fancy"
+
+" ControlP config
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_extensions = ['mixed', 'line']
+let g:ctrlp_max_height = 20
+
+" Toggle indent guides on and off
+nmap <silent> <leader>ii :IndentGuidesToggle<CR>
+
+" Toggle to last baffer
+nmap <silent> <leader>p :b#<cr>
+
+" move between windows
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
+" vim-signature - for setting and showing marks
 "
+" m[a-zA-Z]    : Toggle mark
+"   m<Space>     : Delete all marks
+"   m,           : Place the next available mark
+"   ]`           : Jump to next mark
+"   [`           : Jump to prev mark
+"   ]'           : Jump to start of next line containing a mark
+"   ['           : Jump to start of prev line containing a mark
+"   `]           : Jump by alphabetical order to next mark
+"   `[           : Jump by alphabetical order to prev mark
+"   ']           : Jump by alphabetical order to start of next line containing a mark
+"   '[           : Jump by alphabetical order to start of prev line containing a mark
+"
+"   m[0-9]       : Toggle the corresponding marker !@#$%^&*()
+"   m<S-[0-9]>   : Remove all markers of the same type
+"   ]=           : Jump to next line having same marker
+"   ]-           : Jump to prev line having same marker
+"   m<BackSpace> : Remove all markers
+
+highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
