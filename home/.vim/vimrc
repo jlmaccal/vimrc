@@ -159,7 +159,7 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme lucius
+colorscheme solarized
 
 
 set encoding=utf8
