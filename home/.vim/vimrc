@@ -45,7 +45,6 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'chrismetcalf/vim-yankring'
 Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'rson/vim-conque'
@@ -63,6 +62,7 @@ Bundle 'vim-scripts/Lucius'
 Bundle 'kshenoy/vim-signature'
 Bundle 'tmhedberg/SimpylFold'
 Bundle 'mikezackles/Bisect'
+Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
 
@@ -470,4 +470,5 @@ set virtualedit=all
 " L                    <Plug>BisectPageRight
 let g:bisect_force_varying_line_endings = 1
 
-
+" python code completion
+let g:jedi#use_tabs_not_buffers = 0
