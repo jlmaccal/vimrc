@@ -437,3 +437,6 @@ map <C-h> <C-w><Left>
 "   m<BackSpace> : Remove all markers
 
 highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
+
+" don't put double spaces after a period
+set nojoinspaces
