@@ -62,6 +62,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/Lucius'
 Bundle 'kshenoy/vim-signature'
+Bundle 'tmhedberg/SimpylFold'
 
 filetype plugin indent on
 
@@ -440,3 +441,5 @@ highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
 
 " don't put double spaces after a period
 set nojoinspaces
+
+let g:SimpylFold_docstring_preview = 1
