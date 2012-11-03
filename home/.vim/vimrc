@@ -29,7 +29,6 @@ Bundle 'robertwahler/vim-markdown'
 Bundle 'olivierverdier/vim-latex-box'
 Bundle 'sjbach/lusty'
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/Obvious-Mode'
 Bundle 'ervandew/supertab'
 Bundle 'majutsushi/tagbar'
@@ -63,6 +62,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/Lucius'
 Bundle 'kshenoy/vim-signature'
 Bundle 'tmhedberg/SimpylFold'
+Bundle 'mikezackles/Bisect'
 
 filetype plugin indent on
 
@@ -442,4 +442,32 @@ highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
 " don't put double spaces after a period
 set nojoinspaces
 
+" show python docstrings when folded
 let g:SimpylFold_docstring_preview = 1
+
+" allow the cursor to go anywhere on the screen
+set virtualedit=all
+
+" Bisect
+" <C-j>(normal mode)   <Plug>BisectDown
+" <C-k>(normal mode)   <Plug>BisectUp
+" <C-h>(normal mode)   <Plug>BisectLeft
+" <C-l>(normal mode)   <Plug>BisectRight
+" <C-i>(normal mode)   <Plug>StopBisect
+" <C-j>(visual mode)   <Plug>VisualBisectDown
+" <C-k>(visual mode)   <Plug>VisualBisectUp
+" <C-h>(visual mode)   <Plug>VisualBisectLeft
+" <C-l>(visual mode)   <Plug>VisualBisectRight
+" <C-i>(visual mode)   <Plug>VisualStopBisect
+" <C-j>(insert mode)   <Plug>InsertBisectDown
+" <C-k>(insert mode)   <Plug>InsertBisectUp
+" <C-h>(insert mode)   <Plug>InsertBisectLeft
+" <C-l>(insert mode)   <Plug>InsertBisectRight
+" <C-i>(insert mode)   <Plug>InsertStopBisect
+" J                    <Plug>BisectPageDown
+" K                    <Plug>BisectPageUp
+" H                    <Plug>BisectPageLeft
+" L                    <Plug>BisectPageRight
+let g:bisect_force_varying_line_endings = 1
+
+
