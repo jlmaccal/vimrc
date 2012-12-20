@@ -151,7 +151,7 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Menlo\ for\ Powerline:h16
+    set gfn=Source\ Code\ Pro:h16
     "set gfn=Menlo:h14
 endif
 
