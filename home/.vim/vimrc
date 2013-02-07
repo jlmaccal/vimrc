@@ -61,8 +61,8 @@ Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/Lucius'
 Bundle 'kshenoy/vim-signature'
 Bundle 'tmhedberg/SimpylFold'
-Bundle 'mikezackles/Bisect'
-Bundle 'davidhalter/jedi-vim'
+Bundle 'goldfeld/vim-seek'
+"Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
 
@@ -151,7 +151,7 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Source\ Code\ Pro:h16
+    set gfn=Source\ Code\ Pro:h12
     "set gfn=Menlo:h14
 endif
 
@@ -281,8 +281,8 @@ let python_highlight_all = 1
 " => key mappings
 """"""""""""""""""""""""""""""
 " set jk to be <esc>
-inoremap jk <esc>
-cnoremap jk <c-c>
+"inoremap jk <esc>
+"cnoremap jk <c-c>
 
 " ,v brings up vimrc file
 nmap <leader>v :e ~/.vim/vimrc<CR>
@@ -445,30 +445,3 @@ set nojoinspaces
 " show python docstrings when folded
 let g:SimpylFold_docstring_preview = 1
 
-" allow the cursor to go anywhere on the screen
-set virtualedit=all
-
-" Bisect
-" <C-j>(normal mode)   <Plug>BisectDown
-" <C-k>(normal mode)   <Plug>BisectUp
-" <C-h>(normal mode)   <Plug>BisectLeft
-" <C-l>(normal mode)   <Plug>BisectRight
-" <C-i>(normal mode)   <Plug>StopBisect
-" <C-j>(visual mode)   <Plug>VisualBisectDown
-" <C-k>(visual mode)   <Plug>VisualBisectUp
-" <C-h>(visual mode)   <Plug>VisualBisectLeft
-" <C-l>(visual mode)   <Plug>VisualBisectRight
-" <C-i>(visual mode)   <Plug>VisualStopBisect
-" <C-j>(insert mode)   <Plug>InsertBisectDown
-" <C-k>(insert mode)   <Plug>InsertBisectUp
-" <C-h>(insert mode)   <Plug>InsertBisectLeft
-" <C-l>(insert mode)   <Plug>InsertBisectRight
-" <C-i>(insert mode)   <Plug>InsertStopBisect
-" J                    <Plug>BisectPageDown
-" K                    <Plug>BisectPageUp
-" H                    <Plug>BisectPageLeft
-" L                    <Plug>BisectPageRight
-let g:bisect_force_varying_line_endings = 1
-
-" python code completion
-let g:jedi#use_tabs_not_buffers = 0
