@@ -445,3 +445,7 @@ set nojoinspaces
 " show python docstrings when folded
 let g:SimpylFold_docstring_preview = 1
 
+" mark columns that are too wide
+let &colorcolumn=join(range(121,999),",")
+hi ColorColumn guibg=#000000 ctermbg=0
+
