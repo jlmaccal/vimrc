@@ -176,8 +176,6 @@ set ffs=unix,dos,mac
 """"""""""""""""""""""""""""""""""""
 " turn off backups since we're usually using git anyway
 set nobackup
-set nowb
-set noswapfile
 
 " turn on persistent undo
 if version >= 703
@@ -364,7 +362,8 @@ augroup END
 " ,mf   Find character
 " ,mF   Find character backwards
 " plus some more. See :h easymotion
-let g:EasyMotion_leader_key = '<Leader>m'
+"let g:EasyMotion_leader_key = '<Leader>m'
+let g:EasyMotion_leader_key = '<Space>'
 
 " YankRing
 " press ,yy to pull up the yank ring
@@ -383,7 +382,6 @@ autocmd BufNewFile,BufRead *.py set nosmartindent
 
 " set highlihgting for curson line and column
 set cursorline
-"set cursorcolumn
 
 " set ,gg  and ,GG mapping for gitv browser and file mode
 nmap <silent> <leader>gg :Gitv<CR>
