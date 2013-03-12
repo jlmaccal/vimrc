@@ -65,6 +65,7 @@ Bundle 'kshenoy/vim-signature'
 Bundle 'goldfeld/vim-seek'
 Bundle 'vim-scripts/AutoTag'
 Bundle 'klen/python-mode'
+Bundle 'akiomik/git-gutter-vim'
 "Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
