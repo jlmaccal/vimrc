@@ -457,4 +457,7 @@ let g:pymode_run = 0
 let g:pymode_folding = 1
 let g:pymode_motion = 1
 
+" mappings to jump between spaces and underscores in normal mode
+nmap <space> f<space>
+nmap - f_
 
