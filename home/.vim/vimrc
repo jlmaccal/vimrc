@@ -186,11 +186,10 @@ set ffs=unix,dos,mac
 set nobackup
 
 " turn on persistent undo
-if version >= 703
+if has("persistent_undo")
     set undodir=~/.vim/undodir
     set undofile
 endif
-
 
 """"""""""""""""""""""""""""""""""""
 " Text, tab, and indent related
