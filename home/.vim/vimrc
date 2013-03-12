@@ -162,11 +162,8 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-"colorscheme solarized
-let g:zenburn_old_Visual = 1
-let g:zenburn_alternate_Visual = 1
-let g:zenburn_high_Contrast=1
-colorscheme zenburn
+colorscheme lucius
+LuciusDark
 
 
 set encoding=utf8
@@ -401,10 +398,6 @@ nmap <leader>rr :RainbowParenthesesToggle<cr>
 
 " powerline config
 set laststatus=2
-" tell powerline to use the solarized colorscheme
-"let g:Powerline_colorscheme = "solarized"
-" tell powerline to use the fancy new fonts
-"let g:Powerline_symbols = "fancy"
 
 " ControlP config
 let g:ctrlp_map = '<c-p>'
@@ -450,7 +443,7 @@ set nojoinspaces
 
 " mark columns that are too wide
 let &colorcolumn=join(range(121,999),",")
-"hi ColorColumn guibg=#000000 ctermbg=0
+hi ColorColumn guibg=#000000 ctermbg=235
 
 " python-mode
 let g:pymode_run = 0
