@@ -45,6 +45,7 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'scrooloose/syntastic'
 Bundle 'godlygeek/tabular'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'jnurmine/Zenburn'
 Bundle 'thinca/vim-ft-markdown_fold'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'rson/vim-conque'
@@ -158,7 +159,11 @@ endif
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+let g:zenburn_old_Visual = 1
+let g:zenburn_alternate_Visual = 1
+let g:zenburn_high_Contrast=1
+colorscheme zenburn
 
 
 set encoding=utf8
