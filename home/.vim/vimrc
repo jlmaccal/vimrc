@@ -371,8 +371,7 @@ augroup END
 " ,mf   Find character
 " ,mF   Find character backwards
 " plus some more. See :h easymotion
-"let g:EasyMotion_leader_key = '<Leader>m'
-let g:EasyMotion_leader_key = '<Space>'
+let g:EasyMotion_leader_key = '<Leader><Leader>'
 
 " YankRing
 " press ,yy to pull up the yank ring
