@@ -62,8 +62,8 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'SirVer/ultisnips'
 Bundle 'vim-scripts/Lucius'
 Bundle 'kshenoy/vim-signature'
-Bundle 'tmhedberg/SimpylFold'
 Bundle 'goldfeld/vim-seek'
+Bundle 'klen/python-mode'
 "Bundle 'davidhalter/jedi-vim'
 
 filetype plugin indent on
@@ -446,10 +446,13 @@ highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
 " don't put double spaces after a period
 set nojoinspaces
 
-" show python docstrings when folded
-let g:SimpylFold_docstring_preview = 1
-
 " mark columns that are too wide
 let &colorcolumn=join(range(121,999),",")
-hi ColorColumn guibg=#000000 ctermbg=0
+"hi ColorColumn guibg=#000000 ctermbg=0
+
+" python-mode
+let g:pymode_run = 0
+let g:pymode_folding = 1
+let g:pymode_motion = 1
+
 
