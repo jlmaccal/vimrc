@@ -1,74 +1,74 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+if has('vim_starting')
+    set rtp+=~/.vim/bundle/neobundle.vim/
+endif
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Brief help
-"
-" :BundleInstall  - install bundles (won't update installed)
-" :BundleInstall! - update if installed
-"
-" :Bundles foo    - search for foo
-" :Bundles! foo   - refresh cached list and search for foo
-"
-" :BundleClean    - confirm removal of unused bundles
-" :BundleClean!   - remove without confirmation
-"
-" see :h vundle for more details
-" or wiki for FAQ
-" Note: comments after Bundle command are not allowed..
-
-" My Bundles here:
-"
-Bundle 'robertwahler/vim-markdown'
-Bundle 'olivierverdier/vim-latex-box'
-Bundle 'sjbach/lusty'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'vim-scripts/Obvious-Mode'
-Bundle 'ervandew/supertab'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'sjl/gundo.vim'
-Bundle 'mileszs/ack.vim'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'gregsexton/gitv'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'vim-scripts/desert256.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'scrooloose/syntastic'
-Bundle 'godlygeek/tabular'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'jnurmine/Zenburn'
-Bundle 'thinca/vim-ft-markdown_fold'
-Bundle 'bronson/vim-trailing-whitespace'
-Bundle 'rson/vim-conque'
-Bundle 'sjl/threesome.vim'
-Bundle 'xolox/vim-shell'
-Bundle 'bkad/CamelCaseMotion'
-Bundle 'lambdalisue/nose.vim'
-Bundle 'reinh/vim-makegreen'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'SirVer/ultisnips'
-Bundle 'vim-scripts/Lucius'
-Bundle 'kshenoy/vim-signature'
-Bundle 'goldfeld/vim-seek'
-Bundle 'vim-scripts/AutoTag'
-Bundle 'klen/python-mode'
-Bundle 'akiomik/git-gutter-vim'
-"Bundle 'davidhalter/jedi-vim'
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
+NeoBundle 'robertwahler/vim-markdown'
+NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
+NeoBundle 'vim-scripts/Obvious-Mode'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-repeat'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'sjl/gundo.vim'
+NeoBundle 'rking/ag.vim'
+NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'gregsexton/gitv'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'vim-scripts/desert256.vim'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'jnurmine/Zenburn'
+NeoBundle 'thinca/vim-ft-markdown_fold'
+NeoBundle 'bronson/vim-trailing-whitespace'
+NeoBundle 'sjl/threesome.vim'
+NeoBundle 'bkad/CamelCaseMotion'
+NeoBundle 'lambdalisue/nose.vim'
+NeoBundle 'reinh/vim-makegreen'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'michaeljsmith/vim-indent-object'
+NeoBundle 'vim-scripts/Lucius'
+NeoBundle 'kshenoy/vim-signature'
+NeoBundle 'vim-scripts/AutoTag'
+NeoBundle 'klen/python-mode'
+NeoBundle 'paradigm/TextObjectify'
+NeoBundle 'kana/vim-textobj-user'
+NeoBundle 'coderifous/textobj-word-column.vim'
+NeoBundle 'thinca/vim-textobj-between'
+NeoBundle 'Julian/vim-textobj-brace'
+NeoBundle 'kana/vim-textobj-indent'
+NeoBundle 'Julian/vim-textobj-variable-segment'
+NeoBundle 'bling/vim-airline'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'tacroe/unite-mark'
+NeoBundle 'vim-scripts/VisIncr'
+NeoBundle 'Shougo/neocomplete.vim'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+" NeoBundle 'davidhalter/jedi-vim'
+NeoBundle 'tpope/vim-commentary'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'Shougo/neomru.vim'
+call neobundle#end()
 
 filetype plugin indent on
+NeoBundleCheck
 
 """"""""""""""""""""""""""""""""""""
 " General Setup
@@ -94,7 +94,7 @@ set shell=/bin/bash
 " vim user interface settings
 """"""""""""""""""""""""""""""""""""
 " set 5 lines/chars when scrolling
-set scrolloff=5
+set scrolloff=10
 set sidescrolloff=5
 
 " turn on wild menu
@@ -143,9 +143,6 @@ set mat=2
 "set noerrorbells
 set visualbell
 
-" turn on line numbering
-set number
-
 
 """"""""""""""""""""""""""""""""""""
 " Colors and Fonts
@@ -155,16 +152,16 @@ syntax enable
 
 " Set font
 if has("macunix")
-    set gfn=Source\ Code\ Pro:h12
+    set gfn=Source\ Code\ Pro:h13
     "set gfn=Menlo:h14
 endif
 
 " set 256 colors
 set t_Co=256
 set background=dark
-colorscheme lucius
-LuciusDark
-
+"colorscheme lucius
+"LuciusDark
+colorscheme jellybeans
 
 set encoding=utf8
 try
@@ -220,10 +217,6 @@ cnoremap <C-N> <Down>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use the arrows to something usefull
-" press left and right to scroll through open buffers
-map <right> :bn<cr>
-map <left> :bp<cr>
 
 " When pressing <leader>cd switch to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>
@@ -309,16 +302,6 @@ nmap <leader>7 "7p
 nmap <leader>8 "8p
 nmap <leader>9 "9p
 
-" supertab
-" press tab to start completion
-" press tab again to cycle through completions
-" press ctrl-y to accept suggested completion
-set completeopt=menuone,longest
-au FileType python set omnifunc=pythoncomplete#Complete
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabRetainCompletionDuration = "completion"
-let g:SuperTabLongestEnhanced = 1
-let g:SuperTabLongestHighlight = 1
 
 " Tagbar
 " press ,tt to open up the tagbar
@@ -339,12 +322,6 @@ set tags=./tags;/
 " press <ctrl>-w <ctrl>-w to cycle between undo and editing window
 " press ,uu again to close
 nnoremap <leader>uu :GundoToggle<CR>
-
-" NERDTree hotkey
-" press ,nn to toggle NERDTree display
-" press ? for help
-nnoremap <leader>nn :NERDTreeToggle<CR>
-let g:NERDTreeQuitOnOpen = 1
 
 " Setup viminfo
 " Keep things persistant between editing sessions
@@ -370,12 +347,6 @@ augroup END
 " plus some more. See :h easymotion
 let g:EasyMotion_leader_key = '<Leader><Leader>'
 
-" YankRing
-" press ,yy to pull up the yank ring
-" Press p to paste the selected text
-let g:yankring_history_dir = '$HOME/.vim/.tmp'
-nnoremap <silent> <leader>yy :YRShow<CR>
-
 " set so that we can use vim with nose testing
 " use ,qq to do nose test
 map <silent> <Leader>qq :call MakeGreen()<cr>
@@ -384,6 +355,8 @@ autocmd BufNewFile,BufRead *.py set nosmartindent
 
 " set syntastic to always check file on read
  let g:syntastic_check_on_open=1
+ let g:syntastic_python_checkers = ['flake8']
+ let g:syntastic_python_flake8_args='--ignore=E501,E128'
 
 " set highlihgting for curson line and column
 set cursorline
@@ -396,25 +369,14 @@ nmap <silent> <leader>GG :Gitv!<CR>
 " sometimes useful for understanding nested expressions
 nmap <leader>rr :RainbowParenthesesToggle<cr>
 
-" powerline config
+" always show the status line
 set laststatus=2
-
-" ControlP config
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_extensions = ['mixed', 'line']
-let g:ctrlp_max_height = 20
 
 " Toggle indent guides on and off
 nmap <silent> <leader>ii :IndentGuidesToggle<CR>
 
 " Toggle to last baffer
 nmap <silent> <leader>p :b#<cr>
-
-" move between windows
-map <C-k> <C-w><Up>
-map <C-j> <C-w><Down>
-map <C-l> <C-w><Right>
-map <C-h> <C-w><Left>
 
 " vim-signature - for setting and showing marks
 "
@@ -436,21 +398,189 @@ map <C-h> <C-w><Left>
 "   ]-           : Jump to prev line having same marker
 "   m<BackSpace> : Remove all markers
 
-highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
+"highlight MatchParen gui=bold guibg=NONE guifg=lightblue cterm=bold ctermbg=NONE
 
 " don't put double spaces after a period
 set nojoinspaces
 
 " mark columns that are too wide
 let &colorcolumn=join(range(121,999),",")
-hi ColorColumn guibg=#000000 ctermbg=235
+hi ColorColumn guifg=NONE guibg=#1c1c1c guisp=#1c1c1c gui=NONE ctermfg=NONE ctermbg=234 cterm=NONE
 
+"
 " python-mode
-let g:pymode_run = 0
+"
 let g:pymode_folding = 1
 let g:pymode_motion = 1
+let g:pymode_doc = 0
+let g:pymode_run = 0
+let g:pymode_lint = 0
+let g:pymode_rope = 0
+let g:pymode_virtualenv = 1
+let g:pymode_indent = 1
+let g:pymode_options = 1
 
-" mappings to jump between spaces and underscores in normal mode
-nmap <space> f<space>l
-nmap - f_l
+" search for character within line
+nmap <space><space> <leader><leader>f
 
+" set folds to be off by default
+set nofoldenable
+
+" relative numbering
+set relativenumber
+set number
+set nostartofline
+
+"
+" Unite configuration
+"
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+
+nnoremap <C-p>    :Unite -no-split -buffer-name=files -start-insert   file_rec/async:!<cr>
+nnoremap <space>f :Unite -no-split -buffer-name=files                 file<cr>
+nnoremap <space>r :Unite -no-split -buffer-name=mru                   file_mru<cr>
+nnoremap <space>/ :Unite -no-split -buffer-name=grep                  grep:.<cr>
+nnoremap <space>y :Unite -no-split -buffer-name=history               history/yank<cr>
+nnoremap <space>b :Unite -no-split -buffer-name=buffers               buffer<cr>
+nnoremap <space>o :Unite -no-split -buffer-name=outline -start-insert outline<cr>
+nnoremap <space>m :Unite -no-split -buffer-name=marks -quick-match    mark<cr>
+nnoremap <space>j :Unite -no-split -buffer-name=jump                  jump<cr>
+
+autocmd FileType unite call s:unite_settings()
+function! s:unite_settings()
+  " Play nice with supertab
+  let b:SuperTabDisabled=1
+  " Enable navigation with control-j and control-k in insert mode
+  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+  nmap <buffer> <ESC>   <Plug>(unite_exit)
+  imap <buffer> jj      <Plug>(unite_insert_leave)
+  imap <buffer> <ESC>   <Plug>(unite_exit)
+endfunction
+
+" Use ag for search
+if executable('ag')
+  let g:unite_source_grep_command = 'ag'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+"
+" NeoComplCache settings
+"
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" move up and down with ctrl-j / ctrl-k
+inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+" complete common subword with tab
+inoremap <expr><Tab> pumvisible()? neocomplete#complete_common_string() : "\<Tab>"
+" when we backspace, kill the popup
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+" close the completion window
+inoremap <expr><C-y>  neocomplete#close_popup()
+" cancel completion
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+    return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+endfunction
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
+let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
+
+"
+" neosnippets
+"
+imap <C-l>     <Plug>(neosnippet_expand_or_jump)
+smap <C-l>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-l>     <Plug>(neosnippet_expand_target)
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+
+let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+set list listchars=tab:⇥⇥
+
+
+" window resize mode
+let g:winresizer_start_key='<C-e>'
+let g:winresizer_vert_resize=1
+let g:winresizer_horiz_resize=1
+
+"
+" jedi
+"
+" don't set vim settings automatically
+" autocmd FileType python setlocal omnifunc=jedi#complete
+" let g:jedi#auto_vim_configuration = 0
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.python = '[^. \t]\.\w*'
+
+"
+" configure status line to show open buffers
+"
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+
+let g:tex_conceal=""
+
+" enable streak mode
+let g:sneak#streak = 1
+
+" text objects
+"
+" word column
+"     ac  -> a column based on a word
+"     ic  -> a column based on innner word
+"     aC  -> a column based on a WORD
+"     ic  -> a column based on inner WORD
+"
+" between
+"     af{char} / if{char} for region between {char}s
+"
+" brace
+"     aj/ij for the closest region of () [] {}
+"
+" indent
+"     ai/ii for block of similarly indented lines
+"     aI/II for a block of lines with the same indentation
+"
+" variable-segment
+"     av/iv for the segment between _ or CamelCase variables
+"
